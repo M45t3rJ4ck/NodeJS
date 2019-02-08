@@ -1,0 +1,34 @@
+
+    body{
+      background: skyblue;
+      font-family: verdana;
+      color: #fff;
+      padding: 30px;
+      text-align: center;
+    };
+
+    h1{
+      font-size: 48px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-align: center;
+    };
+
+    h2{
+      font-size: 30px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-align: center;
+    };
+
+    p, li{
+      font-size: 16px;
+      text-align: center;
+    };
+
+    .container{
+      width: 600px;
+      height: 100%;
+      display: block;
+      align-items: center;
+    };

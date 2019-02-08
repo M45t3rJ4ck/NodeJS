@@ -1,0 +1,19 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "All work and some play today...",
+  "main": "Test.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.10",
+    "nodemailer": "^5.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "Test"
+  },
+  "author": "Willem A Voges",
+  "license": "ISC"
+}

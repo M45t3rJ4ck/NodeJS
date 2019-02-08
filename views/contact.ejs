@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <link href="/assets/styles.css" rel="stylesheet" type="text/css"/>
+
+  </head>
+
+  <body>
+
+    <h1>Contact Us</h1>
+
+      <p>Please contact us for any further information</p>
+
+      <form id="contactForm" class="container" method="POST" action="/contact">
+
+        <label for="who">Who would you like to contact?</label>
+
+          <input type="text" name="who" value="<%= qs.person %>">
+
+        <label for="department">Which department might this person work?</label>
+
+          <input type="text" name="department" value="<%= qs.job %>">
+
+        <label for="email">What is your email address, just for incase!</label>
+
+          <input type="text" name="email">
+
+        <input type="submit" value="submit">
+
+      </form>
+
+      <% include partial/nav.ejs %>
+
+  </body>
+
+</html>

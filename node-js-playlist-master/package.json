@@ -1,0 +1,17 @@
+{
+  "name": "to-do-list",
+  "version": "1.0.0",
+  "description": "An little application to check to-do's.",
+  "main": "app.ejs",
+  "scripts": {
+    "test": "Test"
+  },
+  "author": "Nu3w4v3",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.10"
+  }
+}
