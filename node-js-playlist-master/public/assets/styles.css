@@ -1,8 +1,10 @@
 body{
+    width: 70%;
+    height: 100%;
+    margin: 0 auto;
     background: #0d1521;
     font-family: tahoma;
     color: #989898;
-    align-content: center;
 }
 
 #todo-table{
@@ -16,16 +18,15 @@ body{
 #todo-table form:after{
     margin: 0;
     content: '';
-    display: inherit;
+    display: block;
     clear: both;
 }
 
 input[type="text"]{
-    width: 70%;
+    width: 50%;
     padding: 20px;
     background:#181c22;
     border: 0;
-    float: left;
     font-size: 20px;
     color: #989898;
 }
@@ -33,7 +34,6 @@ input[type="text"]{
 button{
     padding: 20px;
     width: 30%;
-    float: left;
     background: #23282e;
     border: 0;
     box-sizing: border-box;
@@ -43,8 +43,6 @@ button{
 }
 
 ul{
-    position: fixed;
-    float: left;
     list-style-type: none;
     padding: 0;
     margin: 0;
