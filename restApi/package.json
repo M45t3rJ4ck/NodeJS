@@ -1,0 +1,22 @@
+{
+  "name": "restApi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "create-react-class": "^15.6.3",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.11",
+    "react": "^16.8.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}

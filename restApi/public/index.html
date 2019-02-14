@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+
+    <title>Members Area</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" />﻿
+    <link href="/styles.css" rel="stylesheet" type="text/css"/>
+
+  </head>
+
+  <body>
+
+    <h1 class="title">Welcome Member, to our community</h1>
+
+    <div id="homepage">
+
+      <h1>Find a developer in your area</h1>
+      <div id="members"></div>
+
+    </div>
+
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="https://unpkg.com/react@16/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom@16/dist/react-dom.min.js"></script>
+
+    <script type="text/babel">
+
+    var React = require('react');
+    var createReactClass = require('create-react-class');
+
+    var Members = React.createReactClass({
+      getInitialState: function(){
+        return({
+          members: []
+        });
+      },
+      render: function(){
+        var members = this.state.members;
+        members = members.map(function(member, index){
+          return(
+            <li key={index}>
+              <span className={member.obj.available}></span>
+              <span className="name">{member.obj.name}</span>
+              <span className="career">{member.obj.career}</span>
+              <span className="dist">{Math.floor(member.dis.calculated / 1000)} km</span>
+            </li>
+          )
+        });
+        return(
+          <div id="member-container">
+            <form id="search" onSubmit={this.handleSubmit}>
+              <label>Enter your latitude:</label>
+              <input type="text" ref="lat" placeholder="latitude" required/>
+              <label>Enter your longitude:</label>
+              <input type="text" ref="lng" placeholder="longitude" required/>
+              <input type="submit" value="Find Member"/>
+            </form>
+            <ul>{member}</ul>
+          </div>
+          );
+        },
+        handleSubmit: function(e){
+          e.preventDefault();
+          var lng = this.refs.lng.value;
+          var lat = this.refs.lat.value;
+
+          fetch("api/members?lng=" + lng + "&lat=" + lat).then(function(data){
+            return data.json();
+          }).then(json => {
+            this.setState({
+              members: json
+            });
+          });
+        }
+      });
+
+      ReactDOM.render(<Members />, document.getElementById("members"));
+
+    </script>
+
+  </body>
+
+</html>
