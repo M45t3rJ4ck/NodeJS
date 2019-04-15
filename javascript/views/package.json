@@ -1,0 +1,16 @@
+{
+  "name": "userarea",
+  "version": "1.0.0",
+  "description": "User Area to contact admin and profile edit",
+  "main": "index.js",
+  "scripts": {
+    "test": "node app.ejs"
+  },
+  "author": "Willem A Voges",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4"
+  }
+}

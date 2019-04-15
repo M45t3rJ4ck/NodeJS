@@ -5,9 +5,9 @@ var fs = require("fs");
 fs.readFile("readText.txt", "utf8", function(err, data){
   fs.writeFile("writeText.txt", data, (err) => {
     if (err) throw err;
-    console.log("File was saved.")
+    console.log("File was saved.");
   });
 });
 
-//this line will execute first before reading & writing was done.
+//this line will execute first before reading & writing is done.
 console.log("testing");
